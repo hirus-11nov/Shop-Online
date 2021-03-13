@@ -366,7 +366,8 @@ class FrontendController extends Controller
         Session::forget('user');
         Auth::logout();
         request()->session()->flash('success','Logout successfully');
-        return back();
+        request()->session()->forget('coupon');
+        return redirect()->route('home');
     }
 
     public function register(){
