@@ -138,10 +138,6 @@ class CouponController extends Controller
         // return $request->all();
         $coupon=Coupon::where('code',$request->code)->first();
         // dd($coupon);
-        if(!$coupon){
-            request()->session()->flash('error','Invalid coupon code, Please try again');
-            return back();
-        }
         if($coupon){
             $total_price=Cart::where('user_id',auth()->user()->id)->where('order_id',null)->sum('price');
             // dd($total_price);
@@ -152,6 +148,10 @@ class CouponController extends Controller
             ]);
             request()->session()->flash('success','Coupon successfully applied');
             return redirect()->back();
+        }
+        else{
+            request()->session()->flash('error','Invalid coupon code, Please try again');
+            return back();
         }
     }
 }
