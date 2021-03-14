@@ -50,13 +50,13 @@
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Liên lạc</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
-									<li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
-									<li>@foreach($settings as $data) {{$data->email}} @endforeach</li>
-									<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
+									<li>Hutech Quận 9, Khu công nghệ cao</li>
+									<li>supcua_shop@gmail.com</li>
+									<li>(090) 9998 989</li>
 								</ul>
 							</div>
 							<!-- End Single Widget -->
@@ -74,7 +74,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Team 3 Đứa</a>  -  Đã đăng ký Bản quyền.</p>
+								<p>Copyright © {{date('Y')}} <a href="https://github.com/hirus-11nov/Shop-Online" target="_blank">Team 3 Đứa</a>  -  Đã đăng ký Bản quyền.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
