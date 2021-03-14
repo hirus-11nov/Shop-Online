@@ -11,7 +11,7 @@
                         <p> Đăng ký bản tin của chúng tôi và nhận <span>10%</span> giảm giá mua đầu tiên của bạn</p>
                         <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
                             @csrf
-                            <input name="email" placeholder="Your email address" required="" type="email">
+                            <input name="email" placeholder="Nhập địa chỉ E-mail của bạn" required="" type="email">
                             <button class="btn" type="submit">Đăng ký</button>
                         </form>
                     </div>
