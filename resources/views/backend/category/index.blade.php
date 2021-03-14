@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Category Lists</h6>
-      <a href="{{route('category.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Category</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách danh mục</h6>
+      <a href="{{route('category.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm mới</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,25 +19,25 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
+              <th>Tiêu đề</th>
               <th>Slug</th>
-              <th>Is Parent</th>
-              <th>Parent Category</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Danh mục cha</th>
+              <th>Danh mục hiện tại</th>
+              <th>Ảnh</th>
+              <th>Trạng thái</th>
+              <th>Hoạt động</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Title</th>
+            <th>S.N.</th>
+              <th>Tiêu đề</th>
               <th>Slug</th>
-              <th>Is Parent</th>
-              <th>Parent Category</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Danh mục cha</th>
+              <th>Danh mục hiện tại</th>
+              <th>Ảnh</th>
+              <th>Trạng thái</th>
+              <th>Hoạt động</th>
             </tr>
           </tfoot>
           <tbody>
@@ -85,7 +85,7 @@
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="#delModal{{$user->id}}Label">Delete user</h5>
+                              <h5 class="modal-title" id="#delModal{{$user->id}}Label">Xoá</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -94,7 +94,7 @@
                               <form method="post" action="{{ route('categorys.destroy',$user->id) }}">
                                 @csrf 
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger" style="margin:auto; text-align:center">Parmanent delete user</button>
+                                <button type="submit" class="btn btn-danger" style="margin:auto; text-align:center">Xoá vĩnh viễn</button>
                               </form>
                             </div>
                           </div>
@@ -106,7 +106,7 @@
         </table>
         <span style="float:right">{{$categories->links()}}</span>
         @else
-          <h6 class="text-center">No Categories found!!! Please create Category</h6>
+          <h6 class="text-center">Không tìm thấy danh mục !!! Vui lòng tạo Danh mục</h6>
         @endif
       </div>
     </div>
@@ -162,8 +162,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn có chắc?",
+                    text: "Sau khi xóa, bạn sẽ không thể khôi phục dữ liệu này!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -172,7 +172,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Dữ liệu của bạn an toàn!");
                     }
                 });
           })
