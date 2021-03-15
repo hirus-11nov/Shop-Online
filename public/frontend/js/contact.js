@@ -35,23 +35,23 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must have at least 2 characters"
+                    required: "Nhập tên vào bạn ơi!",
+                    minlength: "2 ký tự trở lên nhé"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must have at least 4 characters"
-                },
-                number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must have at least 9 characters"
+                    required: "Nhập tiêu đề bạn ơi!",
+                    minlength: "4 ký tự trở lên nhé"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "Không email, không tin nhắn, OK!"
+                },
+                phone: {
+                    required: "Nhập số điện thoại đi chứ?",
+                    minlength: "10 số mới hợp lệ nha"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "Your subject must have at least 10 characters"
+                    required: "Không có nội dung thì gửi ai xem!",
+                    minlength: "Nội dung phải 10 ký tự mới chấp nhận"
                 }
             },
             submitHandler: function(form) {
