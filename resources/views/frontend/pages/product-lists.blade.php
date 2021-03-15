@@ -219,7 +219,7 @@
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
 														</div>
 														<p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
-														<a href="javascript:void(0)" class="btn cart" data-id="{{$product->id}}">Mua ngayh!</a>
+														<a href="javascript:void(0)" class="btn cart" data-id="{{$product->id}}">Mua ngay!</a>
 													</div>
 												</div>
 											</div>

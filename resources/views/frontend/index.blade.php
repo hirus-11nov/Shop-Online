@@ -59,7 +59,7 @@
                                 @endif
                                 <div class="content">
                                     <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Discover Now</a>
+                                        <a href="{{route('product-cat',$cat->slug)}}">KHÁM PHÁ NGAY!</a>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Sản phẩm nổi bật</h2>
+                        <h2>SẢN PHẨM NỔI BẬT</h2>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                                 @endphp
                                 @if($categories)
                                 <button class="btn" style="background:black"data-filter="*">
-                                    All Products
+                                    Tất cả sản phẩm
                                 </button>
                                     @foreach($categories as $key=>$cat)
                                     
@@ -205,7 +205,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Sản phẩm cháy hàng!</h2>
+                    <h2>SẢN PHẨM CHÁY HÀNG</h2>
                 </div>
             </div>
         </div>
@@ -265,7 +265,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>SẢN PHẨM MỚI NHẤT</h1>
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>From Our Blog</h2>
+                    <h2>BLOG</h2>
                 </div>
             </div>
         </div>
@@ -363,7 +363,7 @@
                             <div class="content">
                                 <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
+                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">XEM THÊM NHÉ</a>
                             </div>
                         </div>
                         <!-- End Single Blog  -->
