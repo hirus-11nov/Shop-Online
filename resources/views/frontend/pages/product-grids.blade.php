@@ -173,7 +173,7 @@
                                                     <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                     @if($product->discount)
-                                                                <span class="price-dec">{{$product->discount}} Giảm %</span>
+                                                                <span class="price-dec"> Giảm {{$product->discount}}%</span>
                                                     @endif
                                                 </a>
                                                 <div class="button-head">
@@ -288,7 +288,7 @@
                                             </div>
                                             @if($product->size)
                                                 <div class="size">
-                                                    <h4>Size</h4>
+                                                    <h4>Kích cỡ</h4>
                                                     <ul>
                                                         @php 
                                                             $sizes=explode(',',$product->size);
@@ -303,7 +303,7 @@
                                             <div class="size">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Size</h5>
+                                                        <h5 class="title">Kích cỡ</h5>
                                                         <select>
                                                             @php 
                                                             $sizes=explode(',',$product->size);
@@ -346,7 +346,7 @@
                                                     <!--/ End Input Order -->
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <button type="submit" class="btn">Add to cart</button>
+                                                    <button type="submit" class="btn">Thêm vào giỏ hàng</button>
                                                     <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
                                                 </div>
                                             </form>
