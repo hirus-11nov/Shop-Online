@@ -10,7 +10,7 @@
         @method('PATCH')
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Tiêu đề <span class="text-danger">*</span></label>
-          <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{$category->title}}" class="form-control">
+          <input id="inputTitle" type="text" name="title" placeholder="Nhập tiêu đề"  value="{{$category->title}}" class="form-control">
           @error('title')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -59,7 +59,7 @@
         </div>
         
         <div class="form-group">
-          <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
+          <label for="status" class="col-form-label">Trạng thái <span class="text-danger">*</span></label>
           <select name="status" class="form-control">
               <option value="active" {{(($category->status=='active')? 'selected' : '')}}>Hoạt động</option>
               <option value="inactive" {{(($category->status=='inactive')? 'selected' : '')}}>Không hoạt động</option>
@@ -88,7 +88,7 @@
 
     $(document).ready(function() {
     $('#summary').summernote({
-      placeholder: "Write short description.....",
+      placeholder: "Viết mô tả ngắn .....",
         tabsize: 2,
         height: 150
     });

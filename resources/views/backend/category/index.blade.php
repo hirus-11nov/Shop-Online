@@ -20,24 +20,24 @@
             <tr>
               <th>S.N.</th>
               <th>Tiêu đề</th>
-              <th>Slug</th>
+              <th>Tiêu đề phụ</th>
               <th>Danh mục cha</th>
               <th>Danh mục hiện tại</th>
               <th>Ảnh</th>
               <th>Trạng thái</th>
-              <th>Hoạt động</th>
+              <th>Hành động</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
             <th>S.N.</th>
               <th>Tiêu đề</th>
-              <th>Slug</th>
+              <th>Tiêu đề phụ</th>
               <th>Danh mục cha</th>
               <th>Danh mục hiện tại</th>
               <th>Ảnh</th>
               <th>Trạng thái</th>
-              <th>Hoạt động</th>
+              <th>Hành động</th>
             </tr>
           </tfoot>
           <tbody>
@@ -52,7 +52,7 @@
                     <td>{{$category->id}}</td>
                     <td>{{$category->title}}</td>
                     <td>{{$category->slug}}</td>
-                    <td>{{(($category->is_parent==1)? 'Yes': 'No')}}</td>
+                    <td>{{(($category->is_parent==1)? 'Có': 'Không')}}</td>
                     <td>
                         @foreach($parent_cats as $parent_cat)
                             {{$parent_cat->title}}
@@ -162,7 +162,7 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Bạn có chắc?",
+                    title: "Bạn có chắc không?",
                     text: "Sau khi xóa, bạn sẽ không thể khôi phục dữ liệu này!",
                     icon: "warning",
                     buttons: true,

@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Banner Edit')
+@section('title','Supcua Shop || Sửa Banner')
 @section('main-content')
 
 <div class="card">
@@ -10,7 +10,7 @@
         @method('PATCH')
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Tiêu đề <span class="text-danger">*</span></label>
-        <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{$banner->title}}" class="form-control">
+        <input id="inputTitle" type="text" name="title" placeholder="Nhập tiêu đề"  value="{{$banner->title}}" class="form-control">
         @error('title')
         <span class="text-danger">{{$message}}</span>
         @enderror
@@ -70,7 +70,7 @@
 
     $(document).ready(function() {
     $('#description').summernote({
-      placeholder: "Write short description.....",
+      placeholder: "Viết mô tả ngắn .....",
         tabsize: 2,
         height: 150
     });

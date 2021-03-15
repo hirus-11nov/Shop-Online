@@ -8,8 +8,8 @@
       <form method="post" action="{{route('category.store')}}">
         {{csrf_field()}}
         <div class="form-group">
-          <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
-          <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{old('title')}}" class="form-control">
+          <label for="inputTitle" class="col-form-label">Tiêu đề <span class="text-danger">*</span></label>
+          <input id="inputTitle" type="text" name="title" placeholder="Nhập tiêu đề"  value="{{old('title')}}" class="form-control">
           @error('title')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -67,7 +67,7 @@
           @enderror
         </div>
         <div class="form-group mb-3">
-          <button type="reset" class="btn btn-warning">Cài lại</button>
+          <button type="reset" class="btn btn-warning">Đặt lại</button>
            <button class="btn btn-success" type="submit">Gửi</button>
         </div>
       </form>
@@ -87,7 +87,7 @@
 
     $(document).ready(function() {
       $('#summary').summernote({
-        placeholder: "Write short description.....",
+        placeholder: "Viết mô tả ngắn .....",
           tabsize: 2,
           height: 120
       });

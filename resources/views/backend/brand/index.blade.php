@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Brand Page')
+@section('title','Supcua Shop || Thương hiệu')
 @section('main-content')
  <!-- DataTales Example -->
  <div class="card shadow mb-4">
@@ -20,7 +20,7 @@
             <tr>
               <th>S.N.</th>
               <th>Tiêu đề</th>
-              <th>Slug</th>
+              <th>Tiêu đề phụ</th>
               <th>Trạng thái</th>
               <th>Hoạt động</th>
             </tr>
@@ -29,7 +29,7 @@
             <tr>
               <th>S.N.</th>
               <th>Tiêu đề</th>
-              <th>Slug</th>
+              <th>Tiêu đề phụ</th>
               <th>Trạng thái</th>
               <th>Hoạt động</th>
               </tr>
@@ -144,7 +144,7 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Bạn có chắc?",
+                    title: "Bạn có chắc không?",
                     text: "Sau khi xóa, bạn sẽ không thể khôi phục dữ liệu này!",
                     icon: "warning",
                     buttons: true,
