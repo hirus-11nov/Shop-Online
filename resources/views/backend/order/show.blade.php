@@ -126,16 +126,13 @@
                     </tr>
                     <tr>
                         <td>Address</td>
-                        <td> : {{$order->address1}}, {{$order->address2}}</td>
+                        <td> : {{$order->address1}}</td>
                     </tr>
                     <tr>
                         <td>Country</td>
                         <td> : {{$order->country}}</td>
                     </tr>
-                    <tr>
-                        <td>Post Code</td>
-                        <td> : {{$order->post_code}}</td>
-                    </tr>
+                  
               </table>
             </div>
           </div>
