@@ -9,7 +9,7 @@
         {{csrf_field()}}
         <div class="form-group">
         <label for="inputTitle" class="col-form-label">Mã giảm giá <span class="text-danger">*</span></label>
-        <input id="inputTitle" type="text" name="code" placeholder="Enter Coupon Code"  value="{{old('code')}}" class="form-control">
+        <input id="inputTitle" type="text" name="code" placeholder="Nhập mã giảm giá"  value="{{old('code')}}" class="form-control">
         @error('code')
         <span class="text-danger">{{$message}}</span>
         @enderror
@@ -18,7 +18,7 @@
         <div class="form-group">
             <label for="type" class="col-form-label">Loại <span class="text-danger">*</span></label>
             <select name="type" class="form-control">
-                <option value="fixed">Đã sửa</option>
+                <option value="fixed">Tiền mặt</option>
                 <option value="percent">Phần trăm</option>
             </select>
             @error('type')
@@ -28,7 +28,7 @@
 
         <div class="form-group">
             <label for="inputTitle" class="col-form-label">Giá trị <span class="text-danger">*</span></label>
-            <input id="inputTitle" type="number" name="value" placeholder="Enter Coupon value"  value="{{old('value')}}" class="form-control">
+            <input id="inputTitle" type="number" name="value" placeholder="Nhập giá trị phiếu giảm giá"  value="{{old('value')}}" class="form-control">
             @error('value')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -45,7 +45,7 @@
           @enderror
         </div>
         <div class="form-group mb-3">
-          <button type="reset" class="btn btn-warning">Cài lại</button>
+          <button type="reset" class="btn btn-warning">Đặt lại</button>
            <button class="btn btn-success" type="submit">Gửi</button>
         </div>
       </form>
@@ -65,7 +65,7 @@
 
     $(document).ready(function() {
     $('#description').summernote({
-      placeholder: "Write short description.....",
+      placeholder: "Viết mô tả ngắn.....",
         tabsize: 2,
         height: 150
     });

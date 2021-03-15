@@ -1,25 +1,25 @@
 @extends('backend.layouts.master')
 
-@section('title','Order Detail')
+@section('title','Chi tiết đơn hàng')
 
 @section('main-content')
 <div class="card">
-  <h5 class="card-header">Order Edit</h5>
+  <h5 class="card-header">Sửa đơn đặt hàng</h5>
   <div class="card-body">
     <form action="{{route('order.update',$order->id)}}" method="POST">
       @csrf
       @method('PATCH')
       <div class="form-group">
-        <label for="status">Status :</label>
+        <label for="status">Trang thái :</label>
         <select name="status" id="" class="form-control">
-          <option value="">--Select Status--</option>
-          <option value="new" {{(($order->status=='new')? 'selected' : '')}}>New</option>
-          <option value="process" {{(($order->status=='process')? 'selected' : '')}}>process</option>
-          <option value="delivered" {{(($order->status=='delivered')? 'selected' : '')}}>Delivered</option>
-          <option value="cancel" {{(($order->status=='cancel')? 'selected' : '')}}>Cancel</option>
+          <option value="">--Chọn trạng thái--</option>
+          <option value="new" {{(($order->status=='new')? 'selected' : '')}}>Mới</option>
+          <option value="process" {{(($order->status=='process')? 'selected' : '')}}>Đang xử lý</option>
+          <option value="delivered" {{(($order->status=='delivered')? 'selected' : '')}}>Đã giao hàng</option>
+          <option value="cancel" {{(($order->status=='cancel')? 'selected' : '')}}>Đã huỷ</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="submit" class="btn btn-primary">Cập nhật</button>
     </form>
   </div>
 </div>

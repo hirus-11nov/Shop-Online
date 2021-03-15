@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
-@section('title','Order Detail')
-
+@section('title','Chi tiết đặt hàng')
+  
 @section('main-content')
 <div class="card">
 <h5 class="card-header">Đơn hàng     <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> Tạo PDF</a>
