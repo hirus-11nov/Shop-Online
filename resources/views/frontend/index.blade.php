@@ -127,7 +127,7 @@
                                                 @elseif($product->condition=='hot')
                                                     <span class="hot">Hot</span>
                                                 @else
-                                                    <span class="price-dec">{{$product->discount}}% Off</span>
+                                                    <span class="price-dec">Giảm {{$product->discount}}%</span>
                                                 @endif
 
 
@@ -186,7 +186,7 @@
                             <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
                             <div class="content">
                                 <p>{{$data->cat_info['title']}}</p>
-                                <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+                                <h3>{{$data->title}} <br>Lên đến<span> {{$data->discount}}%</span></h3>
                                 <a href="{{route('product-detail',$data->slug)}}">MUA NGAY</a>
                             </div>
                         </div>
