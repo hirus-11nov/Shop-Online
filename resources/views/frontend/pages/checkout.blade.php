@@ -331,6 +331,25 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label>Địa chỉ 2</label>
+                                            <input type="text" name="address2" placeholder="" value="{{old('address2')}}">
+                                            @error('address2')
+                                                <span class='text-danger'>{{$message}}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label>Mã vùng</label>
+                                            <input type="text" name="post_code" placeholder="" value="{{old('post_code')}}">
+                                            @error('post_code')
+                                                <span class='text-danger'>{{$message}}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <!--/ End Form -->
                             </div>
