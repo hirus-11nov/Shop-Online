@@ -57,10 +57,18 @@
 									<li>Hutech Quận 9, Khu công nghệ cao</li>
 									<li>supcua_shop@gmail.com</li>
 									<li>(090) 9998 989</li>
+									<li>Cộng đồng Supcua Shop:</li>
 								</ul>
 							</div>
+							<div class="socials-share">
+								<a class="bg-facebook" href="#" target="_blank"><span class="fa fa-facebook"></span></a>
+								<a class="bg-twitter" href="#" target="_blank"><span class="fa fa-twitter"></span></a>
+								<a class="bg-google-plus" href="#" target="_blank"><span class="fa fa-google-plus"></span></a>
+								<a class="bg-pinterest" href="#" target="_blank"><span class="fa fa-pinterest"></span></a>
+								<a class="bg-email" href="#" target="_blank"><span class="fa fa-envelope"></span></a>
+							</div>
 							<!-- End Single Widget -->
-							<div class="sharethis-inline-follow-buttons"></div>
+							<!--<div class="sharethis-inline-follow-buttons"></div>-->
 						</div>
 						<!-- End Single Widget -->
 					</div>
