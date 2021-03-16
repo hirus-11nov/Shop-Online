@@ -36,7 +36,7 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Dịch vụ khách hàng</h4>
+							<h4>Hỗ trợ</h4>
 							<ul>
 								<li><a href="#">Phương thức thanh toán</a></li>
 								<li><a href="#">Hoàn tiền</a></li>
