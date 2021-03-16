@@ -358,7 +358,7 @@
                                             </li>
                                             
                                             @if(session('coupon'))
-                                            <li class="coupon_price" data-price="{{session('coupon')['value']}}">Tiết kiệm<span>${{number_format(session('coupon')['value'],2)}}</span></li>
+                                            <li class="coupon_price" data-price="{{session('coupon')['value']}}">Tiết kiệm<span>{{number_format(session('coupon')['value'])}}₫</span></li>
                                             @endif
                                             @php
                                                 $total_amount=Helper::totalCartPrice();
@@ -367,9 +367,9 @@
                                                 }
                                             @endphp
                                             @if(session('coupon'))
-                                                <li class="last"  id="order_total_price">Tổng thanh toán<span>${{number_format($total_amount,2)}}</span></li>
+                                                <li class="last"  id="order_total_price">Tổng thanh toán<span>{{number_format($total_amount)}}₫</span></li>
                                             @else
-                                                <li class="last"  id="order_total_price">Tổng thanh toán<span>${{number_format($total_amount,2)}}</span></li>
+                                                <li class="last"  id="order_total_price">Tổng thanh toán<span>{{number_format($total_amount)}}₫</span></li>
                                             @endif
                                         </ul>
                                     </div>
@@ -423,7 +423,7 @@
 					<div class="single-service">
 						<i class="ti-rocket"></i>
 						<h4>MIỄN PHÍ VẬN CHUYỂN</h4>
-						<p>Hóa đơn trên 500.000 VNĐ</p>
+						<p>Hóa đơn trên 500.000₫</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -467,11 +467,11 @@
                     <div class="col-lg-8 offset-lg-2 col-12">
                         <!-- Start Newsletter Inner -->
                         <div class="inner">
-                            <h4>Newsletter</h4>
-                            <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+                            <h4>Bản tin</h4>
+                            <p> Đăng ký bản tin của chúng tôi và nhận<span>10%</span> giảm giá mua đầu tiên của bạn</p>
                             <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
                                 <input name="EMAIL" placeholder="Your email address" required="" type="email">
-                                <button class="btn">Subscribe</button>
+                                <button class="btn">Đăng ký</button>
                             </form>
                         </div>
                         <!-- End Newsletter Inner -->

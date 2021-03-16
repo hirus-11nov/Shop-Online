@@ -190,7 +190,7 @@
 					<div class="single-service">
 						<i class="ti-rocket"></i>
 						<h4>MIỄN PHÍ VẬN CHUYỂN</h4>
-						<p>Hóa đơn trên 500.000 VNĐ</p>
+						<p>Hóa đơn trên 500.000₫</p>
 					</div>
 					<!-- End Single Service -->
 				</div>

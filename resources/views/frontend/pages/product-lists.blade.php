@@ -70,7 +70,7 @@
 												<div class="price_slider_amount">
 												<div class="label-input">
 													<span>Khoảng từ:</span>
-													<input type="text" id="amount" name="price_range" value='@if(!empty($_GET['price'])) {{$_GET['price']}} @endif' placeholder="Add Your Price"/>
+													<input type="text" id="amount" name="price_range" value='@if(!empty($_GET['price'])) {{$_GET['price']}} @endif' placeholder="Thêm giá của bạn"/>
 												</div>
 											</div> --}}
 											@php
@@ -90,13 +90,13 @@
 									</div>
 									{{-- <ul class="check-box-list">
 										<li>
-											<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">100000đ - 300000đ<span class="count">(3)</span></label>
+											<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">100000₫ - 300000₫<span class="count">(3)</span></label>
 										</li>
 										<li>
-											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">300000đ - 500000<span class="count">(5)</span></label>
+											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">300000₫ - 500000₫<span class="count">(5)</span></label>
 										</li>
 										<li>
-											<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">500000đ - 1000000đ<span class="count">(8)</span></label>
+											<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">500000₫ - 1000000₫<span class="count">(8)</span></label>
 										</li>
 									</ul> --}}
 								</div>
@@ -119,7 +119,7 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted">${{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>                                                
+                                                <p class="price"><del class="text-muted">{{number_format($product->price)}}₫</del>   {{number_format($org)}}₫  </p>                                                
                                             </div>
                                         </div>
                                         <!-- End Single Post -->
@@ -161,10 +161,10 @@
 												<label>Xếp theo :</label>
 												<select class='sortBy' name='sortBy' onchange="this.form.submit();">
 													<option value="">Mặc định</option>
-													<option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
-													<option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
-													<option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
-													<option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Brand</option>
+													<option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Tên sản phẩm</option>
+													<option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Giá</option>
+													<option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Danh mục</option>
+													<option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Thương hiệu</option>
 												</select>
 											</div>
 										</div>
@@ -212,8 +212,8 @@
 																@php
 																	$after_discount=($product->price-($product->price*$product->discount)/100);
 																@endphp
-																<span>${{number_format($after_discount,2)}}</span>
-																<del>${{number_format($product->price,2)}}</del>
+																<span>{{number_format($after_discount)}}₫</span>
+																<del>{{number_format($product->price)}}₫</del>
 															</div>
 															<h3 class="title"><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
@@ -305,7 +305,7 @@
 												@php
 													$after_discount=($product->price-($product->price*$product->discount)/100);
 												@endphp
-												<h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+												<h3><small><del class="text-muted">{{number_format($product->price)}}₫</del></small>    {{number_format($after_discount)}}₫  </h3>
 												<div class="quickview-peragraph">
 													<p>{!! html_entity_decode($product->summary) !!}</p>
 												</div>

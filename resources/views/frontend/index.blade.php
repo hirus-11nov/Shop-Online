@@ -148,8 +148,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                                <span>{{number_format($after_discount)}}₫</span>
+                                                <del style="padding-left:4%;">{{number_format($product->price)}}₫</del>
                                             </div>
                                         </div>
                                     </div>
@@ -239,11 +239,11 @@
                             <div class="product-content">
                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                 <div class="product-price">
-                                    <span class="old">${{number_format($product->price,2)}}</span>
+                                    <span class="old">{{number_format($product->price)}}₫</span>
                                     @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                     @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
+                                    <span>{{number_format($after_discount)}}₫</span>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
                                         <h4 class="title"><a href="#">{{$product->title}}</a></h4>
-                                        <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                        <p class="price with-discount">{{number_format($product->price)}}₫</p>
                                     </div>
                                 </div>
                                 </div>
@@ -324,15 +324,15 @@
                     <div class="col-lg-6 col-12 padding-left">
                         <div class="content">
                             <div class="heading-block">
-                                <p class="small-title">Deal of day</p>
+                                <p class="small-title">Ưu đãi trong ngày</p>
                                 <h3 class="title">{{$data->title}}</h3>
                                 <p class="text">{!! html_entity_decode($data->summary) !!}</p>
                                 @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                 @endphp
-                                <h1 class="price">${{number_format($after_discount)}} <s>${{number_format($data->price)}}</s></h1>
+                                <h1 class="price">{{number_format($after_discount)}} <s>${{number_format($data->price)}}₫</s></h1>
                                 <div class="coming-time">
-                                    <div class="clearfix" data-countdown="2021/02/30"></div>
+                                    <div class="clearfix" data-countdown="2021/03/16"></div>
                                 </div>
                             </div>
                         </div>	
@@ -385,7 +385,7 @@
                 <div class="single-service">
                     <i class="ti-rocket"></i>
                     <h4>Miễn phí vận chuyển</h4>
-                    <p>Hóa đơn trên 500.000 VNĐ</p>
+                    <p>Hóa đơn trên 500.000₫</p>
                 </div>
                 <!-- End Single Service -->
             </div>

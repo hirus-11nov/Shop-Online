@@ -79,12 +79,12 @@
 																@endif
 															@endfor
 													</ul>
-													<a href="#" class="total-review">({{$product_detail['getReview']->count()}}) Review</a>
+													<a href="#" class="total-review">({{$product_detail['getReview']->count()}}) Đánh giá</a>
                                                 </div>
                                                 @php 
                                                     $after_discount=($product_detail->price-(($product_detail->price*$product_detail->discount)/100));
                                                 @endphp
-												<p class="price"><span class="discount">${{number_format($after_discount,2)}}</span><s>${{number_format($product_detail->price,2)}}</s> </p>
+												<p class="price"><span class="discount">{{number_format($after_discount)}}₫</span><s>{{number_format($product_detail->price)}}₫</s> </p>
 												<p class="description">{!!($product_detail->summary)!!}</p>
 											</div>
 											<!--/ End Description -->
@@ -327,7 +327,7 @@
 											@endphp
                                             <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                             <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                            <span class="price-dec">{{$data->discount}} Giảm %</span>
+                                            <span class="price-dec">Giảm {{$data->discount}}%</span>
                                                                     {{-- <span class="out-of-stock">Cháy hàng</span> --}}
                                         </a>
                                         <div class="button-head">
@@ -347,8 +347,8 @@
                                             @php 
                                                 $after_discount=($data->price-(($data->discount*$data->price)/100));
                                             @endphp
-                                            <span class="old">${{number_format($data->price,2)}}</span>
-                                            <span>${{number_format($after_discount,2)}}</span>
+                                            <span class="old">{{number_format($data->price)}}₫</span>
+                                            <span>{{number_format($after_discount)}}₫</span>
                                         </div>
                                       
                                     </div>
