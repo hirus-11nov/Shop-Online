@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Checkout page')
+@section('title','Thanh toán')
 
 @section('main-content')
 
