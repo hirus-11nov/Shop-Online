@@ -23,7 +23,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập Nữ</a></h3>
                         <div class="product-price">
-                            <span>$2900000</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Hồng tuyệt vời</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tầm túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập quần lót nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tầm túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                         <a href="product-details.html">
                             <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
                             <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                            <span class="price-dec">30% Off</span>
+                            <span class="price-dec">Giảm 30%</span>
                         </a>
                         <div class="button-head">
                             <div class="product-action">
@@ -155,7 +155,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Mũ lưỡi trai cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Váy Polo cho nữ/a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -208,8 +208,8 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Kính râm cho nữ</a></h3>
                         <div class="product-price">
-                            <span class="old">$60.00</span>
-                            <span>$50.00</span>
+                            <span class="old">600,000₫</span>
+                            <span>500,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập phụ nữ nóng bỏng</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -269,7 +269,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Màn trình diễn màu hồng tuyệt vời</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -322,7 +322,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập quần lót nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -348,7 +348,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -359,7 +359,7 @@
                         <a href="product-details.html">
                             <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
                             <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                            <span class="price-dec">30% Off</span>
+                            <span class="price-dec">Giảm 30%</span>
                         </a>
                         <div class="button-head">
                             <div class="product-action">
@@ -375,7 +375,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Mũ lưỡi trai cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -401,7 +401,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Váy Polo cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -428,8 +428,8 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Kính râm cho nữ</a></h3>
                         <div class="product-price">
-                            <span class="old">$60.00</span>
-                            <span>$50.00</span>
+                            <span class="old">600,000₫</span>
+                            <span>500,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -463,7 +463,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập phụ nữ nóng bỏng</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -489,7 +489,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Màn trình diễn màu hồng tuyệt vời</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -515,7 +515,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -542,7 +542,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập quần lót nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -568,7 +568,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -579,7 +579,7 @@
                         <a href="product-details.html">
                             <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
                             <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                            <span class="price-dec">30% Off</span>
+                            <span class="price-dec">Giảm 30%</span>
                         </a>
                         <div class="button-head">
                             <div class="product-action">
@@ -595,7 +595,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Mũ lưỡi trai cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -621,7 +621,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Váy Polo cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -648,8 +648,8 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Kính râm cho nữ</a></h3>
                         <div class="product-price">
-                            <span class="old">$60.00</span>
-                            <span>$50.00</span>
+                            <span class="old">600,000₫</span>
+                            <span>500,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -683,7 +683,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập phụ nữ nóng bỏng</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -709,7 +709,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Màn trình diễn màu hồng tuyệt vời</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -735,7 +735,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -762,7 +762,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập quần lót nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -788,7 +788,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -799,7 +799,7 @@
                         <a href="product-details.html">
                             <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
                             <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                            <span class="price-dec">30% Off</span>
+                            <span class="price-dec">Giảm 30%</span>
                         </a>
                         <div class="button-head">
                             <div class="product-action">
@@ -815,7 +815,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Mũ lưỡi trai cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -841,7 +841,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Váy Polo cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -868,8 +868,8 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Kính râm cho nữ</a></h3>
                         <div class="product-price">
-                            <span class="old">$60.00</span>
-                            <span>$50.00</span>
+                            <span class="old">600,000₫</span>
+                            <span>500,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -903,7 +903,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập phụ nữ nóng bỏng</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -929,7 +929,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Màn trình diễn màu hồng tuyệt vời</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -955,7 +955,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -982,7 +982,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập quần lót nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -1008,7 +1008,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Bộ sưu tập túi</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -1019,7 +1019,7 @@
                         <a href="product-details.html">
                             <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
                             <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                            <span class="price-dec">30% Off</span>
+                            <span class="price-dec">Giảm 30%</span>
                         </a>
                         <div class="button-head">
                             <div class="product-action">
@@ -1035,7 +1035,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Mũ lưỡi trai cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -1061,7 +1061,7 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Váy Polo cho nữ</a></h3>
                         <div class="product-price">
-                            <span>$29.00</span>
+                            <span>290,000₫</span>
                         </div>
                     </div>
                 </div>
@@ -1088,8 +1088,8 @@
                     <div class="product-content">
                         <h3><a href="product-details.html">Kính râm cho nữ</a></h3>
                         <div class="product-price">
-                            <span class="old">$60.00</span>
-                            <span>$50.00</span>
+                            <span class="old">600,000₫</span>
+                            <span>500,000₫</span>
                         </div>
                     </div>
                 </div>

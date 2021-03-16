@@ -474,20 +474,20 @@
                                                         @endif
                                                     @endfor
                                                 </div>
-                                                <a href="#"> ({{$rate_count}} customer review)</a>
+                                                <a href="#"> ({{$rate_count}} Đánh giá)</a>
                                             </div>
                                             <div class="quickview-stock">
                                                 @if($product->stock >0)
-                                                <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
+                                                <span><i class="fa fa-check-circle-o"></i> Còn {{$product->stock}} SP</span>
                                                 @else 
-                                                <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
+                                                <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} Hết hàng</span>
                                                 @endif
                                             </div>
                                         </div>
                                         @php
                                             $after_discount=($product->price-($product->price*$product->discount)/100);
                                         @endphp
-                                        <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                        <h3><small><del class="text-muted">{{number_format($product->price)}}₫</del></small>    {{number_format($after_discount)}}₫  </h3>
                                         <div class="quickview-peragraph">
                                             <p>{!! html_entity_decode($product->summary) !!}</p>
                                         </div>
@@ -495,7 +495,7 @@
                                             <div class="size">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Size</h5>
+                                                        <h5 class="title">Kích thước</h5>
                                                         <select>
                                                             @php 
                                                             $sizes=explode(',',$product->size);
@@ -507,12 +507,12 @@
                                                         </select>
                                                     </div>
                                                     {{-- <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Color</h5>
+                                                        <h5 class="title">Màu sắc</h5>
                                                         <select>
-                                                            <option selected="selected">orange</option>
-                                                            <option>purple</option>
-                                                            <option>black</option>
-                                                            <option>pink</option>
+                                                            <option selected="selected">Cam</option>
+                                                            <option>Tím</option>
+                                                            <option>Đen</option>
+                                                            <option>Hồng</option>
                                                         </select>
                                                     </div> --}}
                                                 </div>
@@ -539,7 +539,7 @@
                                                 <!--/ End Input Order -->
                                             </div>
                                             <div class="add-to-cart">
-                                                <button type="submit" class="btn">Add to cart</button>
+                                                <button type="submit" class="btn">Thêm vào giỏ hàng</button>
                                                 <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
                                             </div>
                                         </form>

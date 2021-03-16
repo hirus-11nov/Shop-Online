@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Supcua Shpơ || TRANG SẢN PHẨM')
+@section('title','Supcua Shop || TRANG SẢN PHẨM')
 
 @section('main-content')
 	<!-- Breadcrumbs -->
@@ -315,12 +315,12 @@
                                                         </select>
                                                     </div>
                                                     {{-- <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Color</h5>
+                                                        <h5 class="title">Màu sắc</h5>
                                                         <select>
-                                                            <option selected="selected">orange</option>
-                                                            <option>purple</option>
-                                                            <option>black</option>
-                                                            <option>pink</option>
+                                                            <option selected="selected">Cam</option>
+                                                            <option>Tím</option>
+                                                            <option>Đen</option>
+                                                            <option>Hồng</option>
                                                         </select>
                                                     </div> --}}
                                                 </div>

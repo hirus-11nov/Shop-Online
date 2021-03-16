@@ -148,7 +148,7 @@
 												@if($product_detail->sub_cat_info)
 												<p class="cat mt-1">Danh mục phụ :<a href="{{route('product-sub-cat',[$product_detail->cat_info['slug'],$product_detail->sub_cat_info['slug']])}}">{{$product_detail->sub_cat_info['title']}}</a></p>
 												@endif
-												<p class="availability">Trạng thái : @if($product_detail->stock>0)<span class="badge badge-success">{{$product_detail->stock}}</span>@else <span class="badge badge-danger">{{$product_detail->stock}}</span>  @endif</p>
+												<p class="availability">Còn @if($product_detail->stock>0)<span class="badge badge-success">{{$product_detail->stock}} </span>@else <span class="badge badge-danger">{{$product_detail->stock}}</span> @endif SP </p>
 											</div>
 											<!--/ End Product Buy -->
 										</div>
@@ -308,7 +308,7 @@
             <div class="row">
 				<div class="col-12">
 					<div class="section-title">
-						<h2>Sản phẩm tương tự</h2>
+						<h2>SẢN PHẨM TƯƠNG T</h2>
 					</div>
 				</div>
             </div>

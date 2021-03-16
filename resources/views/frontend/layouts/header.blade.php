@@ -22,7 +22,7 @@
                     <div class="right-content">
                         <ul class="list-main">
                         <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Theo dỗi đơn hàng</a></li>
-                            {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Hot Deal</a></li> --}}
+                            {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Ưu đãi hấp dẫn</a></li> --}}
                             @auth 
                                 @if(Auth::user()->role=='admin')
                                     <li><i class="ti-user"></i> <a href="{{route('admin')}}"  target="_blank">Bảng điều khiển</a></li>
@@ -120,14 +120,14 @@
                                                         <a href="{{route('wishlist-delete',$data->id)}}" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                         <a class="cart-img" href="#"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></a>
                                                         <h4><a href="{{route('product-detail',$data->product['slug'])}}" target="_blank">{{$data->product['title']}}</a></h4>
-                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">${{number_format($data->price,2)}}</span></p>
+                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">{{number_format($data->price)}}₫</span></p>
                                                     </li>
                                             @endforeach
                                     </ul>
                                     <div class="bottom">
                                         <div class="total">
-                                            <span>Total</span>
-                                            <span class="total-amount">${{number_format(Helper::totalWishlistPrice(),2)}}</span>
+                                            <span>Tổng</span>
+                                            <span class="total-amount">{{number_format(Helper::totalWishlistPrice())}}₫</span>
                                         </div>
                                         <a href="{{route('cart')}}" class="btn animate">Giỏ hàng</a>
                                     </div>
@@ -144,7 +144,7 @@
                             @auth
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span>{{count(Helper::getAllProductFromCart())}} Items</span>
+                                        <span>{{count(Helper::getAllProductFromCart())}} Sản phẩm</span>
                                         <a href="{{route('cart')}}">Xem giỏ hàng</a>
                                     </div>
                                     <ul class="shopping-list">
@@ -157,14 +157,14 @@
                                                         <a href="{{route('cart-delete',$data->id)}}" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                         <a class="cart-img" href="#"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></a>
                                                         <h4><a href="{{route('product-detail',$data->product['slug'])}}" target="_blank">{{$data->product['title']}}</a></h4>
-                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">${{number_format($data->price,2)}}</span></p>
+                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">{{number_format($data->price)}}₫</span></p>
                                                     </li>
                                             @endforeach
                                     </ul>
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Tổng:</span>
-                                            <span class="total-amount">${{number_format(Helper::totalCartPrice(),2)}}</span>
+                                            <span class="total-amount">{{number_format(Helper::totalCartPrice())}}₫</span>
                                         </div>
                                         <a href="{{route('checkout')}}" class="btn animate">Thanh toán</a>
                                     </div>
@@ -189,10 +189,10 @@
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                                         <ul class="nav main-menu menu navbar-nav">
+                                            {{Helper::getHeaderCategory()}}
                                             <li class="{{Request::path()=='home' ? 'active' : ''}}"><a href="{{route('home')}}">Trang chủ</a></li>
-                                            <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Cửa hàng</a><span class="new">Mới</span></li>												
-                                                {{Helper::getHeaderCategory()}}
-                                            <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a></li>									
+                                            <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Cửa hàng</a><span class="new">Mới</span></li>												    
+                                            <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Tin thời trang</a></li>									
                                             <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a href="{{route('about-us')}}">Về chúng tôi</a></li>   
                                             <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a href="{{route('contact')}}">Liên hệ</a></li>
                                         </ul>
