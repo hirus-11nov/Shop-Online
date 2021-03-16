@@ -57,8 +57,8 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="section-title">
-						<h2>Our Expert Team</h2>
-						<p>Business consulting excepteur sint occaecat cupidatat consulting non proident, sunt in culpa qui officia deserunt laborum market. </p>
+						<h2>Nhóm của chúng tôi</h2>
+						<p>Team 3 Đứa</p>
 					</div>
 				</div>
 			</div>
@@ -74,8 +74,8 @@
 						<div class="info-head">
 							<!-- Info Box -->
 							<div class="info-box">
-								<h4 class="name"><a href="#">Dahlia Moore</a></h4>
-								<span class="designation">Senior Manager</span>
+								<h4 class="name"><a href="#">Bùi Trung Hiếu</a></h4>
+								<span class="designation">Quản lý cấp cao</span>
 							</div>
 							<!-- End Info Box -->
 							<!-- Social -->
@@ -102,8 +102,8 @@
 						<div class="info-head">
 							<!-- Info Box -->
 							<div class="info-box">
-								<h4 class="name"><a href="#">Jhone digo</a></h4>
-								<span class="designation">Markeitng</span>
+								<h4 class="name"><a href="#">Nguyễn Hoàng Tuấn</a></h4>
+								<span class="designation">Vua Marketting</span>
 							</div>
 							<!-- End Info Box -->
 							<!-- Social -->
@@ -130,8 +130,8 @@
 						<div class="info-head">
 							<!-- Info Box -->
 							<div class="info-box">
-								<h4 class="name"><a href="#">Zara tingo</a></h4>
-								<span class="designation">Web Developer</span>
+								<h4 class="name"><a href="#">Hồ Thanh Sang</a></h4>
+								<span class="designation">Lập trình viên web</span>
 							</div>
 							<!-- End Info Box -->
 							<!-- Social -->
@@ -158,8 +158,8 @@
 						<div class="info-head">
 							<!-- Info Box -->
 							<div class="info-box">
-								<h4 class="name"><a href="#">David Zone</a></h4>
-								<span class="designation">SEO Expert</span>
+								<h4 class="name"><a href="#">Bùi Trung Hiếu</a></h4>
+								<span class="designation">Con chủ tịch</span>
 							</div>
 							<!-- End Info Box -->
 							<!-- Social -->

@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('title','Supcua Shop || TRANG CHỦ')
 @section('main-content')
 <!-- Slider Area -->
 <section class="hero-slider">
@@ -349,7 +349,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>BLOG</h2>
+                    <h2>TIN THỜI TRANG</h2>
                 </div>
             </div>
         </div>

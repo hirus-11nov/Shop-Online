@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || PRODUCT PAGE')
+@section('title','Supcua Shpơ || TRANG SẢN PHẨM')
 
 @section('main-content')
 	<!-- Breadcrumbs -->
