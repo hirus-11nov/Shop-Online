@@ -80,7 +80,7 @@
                             </select>
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
-                                <input name="search" placeholder="Nhập sản phẩm cần tìm ....." type="search">
+                                <input name="search" placeholder="Nhập sản phẩm cần tìm....." type="search">
                                 <button class="btnn" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
