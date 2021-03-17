@@ -50,9 +50,9 @@
                     </td>
                     <td>
                         @if($coupon->type=='fixed')
-                            ${{number_format($coupon->value,2)}}
+                            {{number_format($coupon->value)}}₫
                         @else
-                            {{$coupon->value}}%
+                        {{number_format($coupon->value)}}%
                         @endif</td>
                     <td>
                         @if($coupon->status=='active')

@@ -32,8 +32,8 @@
             <td>{{$order->first_name}} {{$order->last_name}}</td>
             <td>{{$order->email}}</td>
             <td>{{$order->quantity}}</td>
-            <td>@foreach($shipping_charge as $data) $ {{number_format($data,2)}} @endforeach</td>
-            <td>${{number_format($order->total_amount,2)}}</td>
+            <td>@foreach($shipping_charge as $data) {{number_format($data)}}₫ @endforeach</td>
+            <td>{{number_format($order->total_amount)}}₫</td>
             <td>
                 @if($order->status=='new')
                   <span class="badge badge-primary">{{$order->status}}</span>
@@ -86,19 +86,19 @@
                           $shipping_charge=DB::table('shippings')->where('id',$order->shipping_id)->pluck('price');
                       @endphp
                         <td>Phí vận chuyển</td>
-                        <td> : $ {{number_format($shipping_charge[0],2)}}</td>
+                        <td> : {{number_format($shipping_charge[0])}}₫</td>
                     </tr>
                     <tr>
                       <td>Mã giảm giá</td>
-                      <td> : $ {{number_format($order->coupon,2)}}</td>
+                      <td> : {{number_format($order->coupon)}}₫</td>
                     </tr>
                     <tr>
                         <td>Tổng tiền</td>
-                        <td> : $ {{number_format($order->total_amount,2)}}</td>
+                        <td> : {{number_format($order->total_amount)}}₫</td>
                     </tr>
                     <tr>
                         <td>Phương thức thanh toán</td>
-                        <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
+                        <td> : @if($order->payment_method=='cod') Thanh toán khi giao hàng @else Paypal @endif</td>
                     </tr>
                     <tr>
                         <td>Tình trạng thanh toán</td>
