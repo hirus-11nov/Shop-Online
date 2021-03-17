@@ -342,14 +342,14 @@
                                     <h2>GIỎ HÀNG</h2>
                                     <div class="content">
                                         <ul>
-										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Tổng Giỏ Hàng<span>${{number_format(Helper::totalCartPrice(),2)}}</span></li>
+										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Tổng Giỏ Hàng<span>{{number_format(Helper::totalCartPrice())}}₫</span></li>
                                             <li class="shipping">
                                                 Phí Vận Chuyển
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
                                                     <select name="shipping" class="nice-select">
                                                         <option value="">Chọn loại vận chuyển</option>
                                                         @foreach(Helper::shipping() as $shipping)
-                                                        <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: ${{$shipping->price}}</option>
+                                                        <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: {{number_format($shipping->price)}}₫</option>
                                                         @endforeach
                                                     </select>
                                                 @else 
