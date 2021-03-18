@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Supcua Shop || Register Page')
+@section('title','Supcua Shop || ĐĂNG KÝ')
 
 @section('main-content')
 	<!-- Breadcrumbs -->
@@ -70,11 +70,11 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group login-btn">
-                                        <button class="btn" type="submit">Đăng ký/button>
+                                        <button class="btn" type="submit">Đăng ký</button> 
                                         <a href="{{route('login.form')}}" class="btn">Đăng nhập</a>
                                         Hoặc
                                         <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
-                                        <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>
+                                        <!-- <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a> -->
                                         <a href="{{route('login.redirect','google')}}" class="btn btn-google"><i class="ti-google"></i></a>
                                     </div>
                                 </div>

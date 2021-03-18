@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || Theo dõi đơn hàng')
+@section('title','Supcua Shop || Theo dõi đơn hàng')
 
 @section('main-content')
     <!-- Breadcrumbs -->
