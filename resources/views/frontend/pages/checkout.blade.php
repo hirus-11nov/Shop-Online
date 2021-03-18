@@ -37,7 +37,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Tên<span>*</span></label>
-                                            <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}" value="{{old('first_name')}}">
+                                            <input type="text" name="first_name" placeholder="" required value="{{old('first_name')}}" value="{{old('first_name')}}">
                                             @error('first_name')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
@@ -46,7 +46,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Họ<span>*</span></label>
-                                            <input type="text" name="last_name" placeholder="" value="{{old('lat_name')}}">
+                                            <input type="text" name="last_name" placeholder="" required value="{{old('last_name')}}">
                                             @error('last_name')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
@@ -55,7 +55,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Email<span>*</span></label>
-                                            <input type="email" name="email" placeholder="" value="{{old('email')}}">
+                                            <input type="email" name="email" placeholder="" required value="{{old('email')}}">
                                             @error('email')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
@@ -325,7 +325,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Địa chỉ<span>*</span></label>
-                                            <input type="text" name="address1" placeholder="" value="{{old('address1')}}">
+                                            <input type="text" name="address1" placeholder="" required value="{{old('address1')}}">
                                             @error('address1')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
@@ -346,7 +346,7 @@
                                             <li class="shipping">
                                                 Phí Vận Chuyển
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
-                                                    <select name="shipping" class="nice-select">
+                                                    <select name="shipping" class="nice-select" required>
                                                         <option value="">Chọn loại vận chuyển</option>
                                                         @foreach(Helper::shipping() as $shipping)
                                                         <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: {{number_format($shipping->price)}}₫</option>
@@ -382,7 +382,7 @@
                                         <div class="checkbox">
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Kiểm tra thanh toán</label> --}}
                                             <form-group>
-                                                <input name="payment_method"  type="radio" value="cod"> <label> Tiền mặt</label><br>
+                                                <input name="payment_method"  type="radio" value="cod" checked> <label> Tiền mặt</label><br>
                                                 <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label> 
                                             </form-group>
                                             
