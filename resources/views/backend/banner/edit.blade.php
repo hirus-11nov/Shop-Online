@@ -41,7 +41,7 @@
         </div>
         
         <div class="form-group">
-          <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
+          <label for="status" class="col-form-label">Trạng thái <span class="text-danger">*</span></label>
           <select name="status" class="form-control">
             <option value="active" {{(($banner->status=='active') ? 'selected' : '')}}>Hoạt động</option>
             <option value="inactive" {{(($banner->status=='inactive') ? 'selected' : '')}}>Không hoạt động</option>

@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-          <label for="is_parent">Danh mục cha</label><br>
+          <label for="is_parent">Danh mục gốc</label><br>
           <input type="checkbox" name='is_parent' id='is_parent' value='{{$category->is_parent}}' {{(($category->is_parent==1)? 'checked' : '')}}> Có                        
         </div>
         {{-- {{$parent_cats}} --}}

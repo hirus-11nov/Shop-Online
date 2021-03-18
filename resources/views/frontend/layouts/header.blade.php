@@ -21,7 +21,7 @@
                     <!-- Top Right -->
                     <div class="right-content">
                         <ul class="list-main">
-                        <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Theo dỗi đơn hàng</a></li>
+                        <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Theo dõi đơn hàng</a></li>
                             {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Ưu đãi hấp dẫn</a></li> --}}
                             @auth 
                                 @if(Auth::user()->role=='admin')
@@ -189,8 +189,8 @@
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                                         <ul class="nav main-menu menu navbar-nav">
-                                            {{Helper::getHeaderCategory()}}
                                             <li class="{{Request::path()=='home' ? 'active' : ''}}"><a href="{{route('home')}}">Trang chủ</a></li>
+                                            {{Helper::getHeaderCategory()}}
                                             <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Cửa hàng</a><span class="new">Mới</span></li>												    
                                             <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Tin thời trang</a></li>									
                                             <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a href="{{route('about-us')}}">Về chúng tôi</a></li>   

@@ -34,7 +34,7 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Cửa hàng</div>
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Sản phẩm</div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">{{\App\Models\Product::countActiveProduct()}}</div>
               </div>
               <div class="col-auto">
@@ -136,7 +136,7 @@
   {
       var data = google.visualization.arrayToDataTable(analytics);
       var options = {
-          title : 'Last 7 Days registered user'
+          title : 'Người dùng mới trong 7 ngày qua'
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
       chart.draw(data, options);
@@ -186,7 +186,7 @@
                   data: {
                     labels: data_keys, // ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                     datasets: [{
-                      label: "Earnings",
+                      label: "Doanh thu",
                       lineTension: 0.3,
                       backgroundColor: "rgba(78, 115, 223, 0.05)",
                       borderColor: "rgba(78, 115, 223, 1)",
@@ -230,7 +230,7 @@
                           padding: 10,
                           // Include a dollar sign in the ticks
                           callback: function(value, index, values) {
-                            return '$' + number_format(value);
+                            return number_format(value) +'₫' ;
                           }
                         },
                         gridLines: {
@@ -262,7 +262,7 @@
                       callbacks: {
                         label: function(tooltipItem, chart) {
                           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-                          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+                          return datasetLabel +": " + number_format(tooltipItem.yLabel) + '₫';
                         }
                       }
                     }
