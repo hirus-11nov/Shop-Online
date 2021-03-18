@@ -18,10 +18,10 @@
         <table class="table table-bordered" id="banner-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>S.N.</th>
+              <th>STT</th>
               <th>Tiêu đề</th>
               <th>Tiêu đề phụ</th>
-              <th>Danh mục cha</th>
+              <th>Danh mục gốc</th>
               <th>Danh mục hiện tại</th>
               <th>Ảnh</th>
               <th>Trạng thái</th>
