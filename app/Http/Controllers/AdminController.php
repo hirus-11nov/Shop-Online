@@ -38,10 +38,10 @@ class AdminController extends Controller
         $data=$request->all();
         $status=$user->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Successfully updated your profile');
+            request()->session()->flash('success','Cập nhật thành công hồ sơ cá nhân');
         }
         else{
-            request()->session()->flash('error','Please try again!');
+            request()->session()->flash('error','Vui lòng thử lại!');
         }
         return redirect()->back();
     }
@@ -68,10 +68,10 @@ class AdminController extends Controller
         // return $settings;
         $status=$settings->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Setting successfully updated');
+            request()->session()->flash('success','Đã cập nhật thành công cài đặt');
         }
         else{
-            request()->session()->flash('error','Please try again');
+            request()->session()->flash('error','Vui lòng thử lại!');
         }
         return redirect()->route('admin');
     }
@@ -89,7 +89,7 @@ class AdminController extends Controller
    
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
    
-        return redirect()->route('admin')->with('success','Password successfully changed');
+        return redirect()->route('admin')->with('success','Thay đổi mật khẩu thành công');
     }
 
     // Pie chart

@@ -21,16 +21,16 @@ class NotificationController extends Controller
         if($notification){
             $status=$notification->delete();
             if($status){
-                request()->session()->flash('success','Notification successfully deleted');
+                request()->session()->flash('success','Đã xoá thông báo.');
                 return back();
             }
             else{
-                request()->session()->flash('error','Error please try again');
+                request()->session()->flash('error','Đã xảy ra lỗi! Vui lòng thử lại.');
                 return back();
             }
         }
         else{
-            request()->session()->flash('error','Notification not found');
+            request()->session()->flash('error','Không tìm thấy thông báo.');
             return back();
         }
     }

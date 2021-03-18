@@ -118,10 +118,10 @@ class MessageController extends Controller
         $message=Message::find($id);
         $status=$message->delete();
         if($status){
-            request()->session()->flash('success','Successfully deleted message');
+            request()->session()->flash('success','Đã xoá thông báo.');
         }
         else{
-            request()->session()->flash('error','Error occurred please try again');
+            request()->session()->flash('error','Đã xảy ra lỗi! Vui lòng thử lại.');
         }
         return back();
     }

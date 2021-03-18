@@ -201,10 +201,10 @@ class OrderController extends Controller
         }
         $status=$order->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Successfully updated order');
+            request()->session()->flash('success','Cập nhật đơn hàng thành công.');
         }
         else{
-            request()->session()->flash('error','Error while updating order');
+            request()->session()->flash('error','Đã xảy ra lỗi! Vui lòng thử lại.');
         }
         return redirect()->route('order.index');
     }
@@ -221,15 +221,15 @@ class OrderController extends Controller
         if($order){
             $status=$order->delete();
             if($status){
-                request()->session()->flash('success','Order Successfully deleted');
+                request()->session()->flash('success','Đã xoá đơn hàng thành công.');
             }
             else{
-                request()->session()->flash('error','Order can not deleted');
+                request()->session()->flash('error','Không thể xoá đơn hàng.');
             }
             return redirect()->route('order.index');
         }
         else{
-            request()->session()->flash('error','Order can not found');
+            request()->session()->flash('error','Không tìm thấy đơn hàng.');
             return redirect()->back();
         }
     }
@@ -243,28 +243,28 @@ class OrderController extends Controller
         $order=Order::where('user_id',auth()->user()->id)->where('order_number',$request->order_number)->first();
         if($order){
             if($order->status=="new"){
-            request()->session()->flash('success','Your order has been placed. please wait.');
+            request()->session()->flash('success','Đơn hàng của bạn đã được đặt.');
             return redirect()->route('home');
 
             }
             elseif($order->status=="process"){
-                request()->session()->flash('success','Your order is under processing please wait.');
+                request()->session()->flash('success','Đơn đặt hàng của bạn đang được xử lý, vui lòng đợi.');
                 return redirect()->route('home');
     
             }
             elseif($order->status=="delivered"){
-                request()->session()->flash('success','Your order is successfully delivered.');
+                request()->session()->flash('success','Đơn hàng của bạn đã được giao thành công.');
                 return redirect()->route('home');
     
             }
             else{
-                request()->session()->flash('error','Your order canceled. please try again');
+                request()->session()->flash('error','Đơn đặt hàng của bạn đã bị hủy.');
                 return redirect()->route('home');
     
             }
         }
         else{
-            request()->session()->flash('error','Invalid order numer please try again');
+            request()->session()->flash('error','Số đơn đặt hàng không hợp lệ, vui lòng thử lại.');
             return back();
         }
     }

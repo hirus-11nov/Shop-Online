@@ -21,7 +21,7 @@ class PaypalController extends Controller
             return [
                 'name' =>$name ,
                 'price' => $item['price'],
-                'desc'  => 'Thank you for using paypal',
+                'desc'  => 'Cám mơn bạn đã sử dụng Paypal.',
                 'qty' => $item['quantity']
             ];
         }, $cart);
@@ -57,7 +57,7 @@ class PaypalController extends Controller
      */
     public function cancel()
     {
-        dd('Your payment is canceled. You can create cancel page here.');
+        dd('Thanh toán của bạn đã bị hủy.');
     }
   
     /**
@@ -72,13 +72,13 @@ class PaypalController extends Controller
         // return $response;
   
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
-            request()->session()->flash('success','You successfully pay from Paypal! Thank You');
+            request()->session()->flash('success','Bạn thanh toán thành công từ Paypal! Cảm ơn bạn');
             session()->forget('cart');
             session()->forget('coupon');
             return redirect()->route('home');
         }
   
-        request()->session()->flash('error','Something went wrong please try again!!!');
+        request()->session()->flash('error','Đã xảy ra lỗi. Vui lòng thử lại!!!');
         return redirect()->back();
     }
 }

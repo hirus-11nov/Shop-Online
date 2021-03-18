@@ -52,10 +52,10 @@ class UsersController extends Controller
         $status=User::create($data);
         // dd($status);
         if($status){
-            request()->session()->flash('success','Successfully added user');
+            request()->session()->flash('success','Thêm người dùng thành công.');
         }
         else{
-            request()->session()->flash('error','Error occurred while adding user');
+            request()->session()->flash('error','Đã xảy ra lỗi khi thêm người dùng!!');
         }
         return redirect()->route('users.index');
 
@@ -108,10 +108,10 @@ class UsersController extends Controller
         
         $status=$user->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Successfully updated');
+            request()->session()->flash('success','Cập nhật thành công');
         }
         else{
-            request()->session()->flash('error','Error occured while updating');
+            request()->session()->flash('error','Đã xảy ra lỗi! Vui lòng thử lại!!');
         }
         return redirect()->route('users.index');
 
@@ -128,10 +128,10 @@ class UsersController extends Controller
         $delete=User::findorFail($id);
         $status=$delete->delete();
         if($status){
-            request()->session()->flash('success','User Successfully deleted');
+            request()->session()->flash('success','Xoá thành công.');
         }
         else{
-            request()->session()->flash('error','There is an error while deleting users');
+            request()->session()->flash('error','Đã xảy ra lỗi! Vui lòng thử lại!!');
         }
         return redirect()->route('users.index');
     }

@@ -45,10 +45,10 @@ class HomeController extends Controller
         $data=$request->all();
         $status=$user->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Successfully updated your profile');
+            request()->session()->flash('success','Cập nhật thành công hồ sơ cá nhân');
         }
         else{
-            request()->session()->flash('error','Please try again!');
+            request()->session()->flash('error','Vui lòng thử lại!');
         }
         return redirect()->back();
     }
@@ -63,21 +63,21 @@ class HomeController extends Controller
         $order=Order::find($id);
         if($order){
            if($order->status=="process" || $order->status=='delivered' || $order->status=='cancel'){
-                return redirect()->back()->with('error','You can not delete this order now');
+                return redirect()->back()->with('error','Bạn không thể xóa đơn đặt hàng này ngay bây giờ.');
            }
            else{
                 $status=$order->delete();
                 if($status){
-                    request()->session()->flash('success','Order Successfully deleted');
+                    request()->session()->flash('success','Đã xoá đơn đặt hàng thành công.');
                 }
                 else{
-                    request()->session()->flash('error','Order can not deleted');
+                    request()->session()->flash('error','Xảy ra lỗi, Vui lòng thử lại!!');
                 }
                 return redirect()->route('user.order.index');
            }
         }
         else{
-            request()->session()->flash('error','Order can not found');
+            request()->session()->flash('error','Không tìm thấy đơn đặt hàng.');
             return redirect()->back();
         }
     }
@@ -115,14 +115,14 @@ class HomeController extends Controller
             $data=$request->all();
             $status=$review->fill($data)->update();
             if($status){
-                request()->session()->flash('success','Review Successfully updated');
+                request()->session()->flash('success','Cập nhật đánh giá.');
             }
             else{
-                request()->session()->flash('error','Something went wrong! Please try again!!');
+                request()->session()->flash('error','Đã xảy ra lỗi. Vui lòng thử lại!!');
             }
         }
         else{
-            request()->session()->flash('error','Review not found!!');
+            request()->session()->flash('error','Không tìm thấy đánh giá!!');
         }
 
         return redirect()->route('user.productreview.index');
@@ -139,10 +139,10 @@ class HomeController extends Controller
         $review=ProductReview::find($id);
         $status=$review->delete();
         if($status){
-            request()->session()->flash('success','Successfully deleted review');
+            request()->session()->flash('success','Đã xoá đánh giá.');
         }
         else{
-            request()->session()->flash('error','Something went wrong! Try again');
+            request()->session()->flash('error','Đã xảy ra lỗi. Vui lòng thử lại!!');
         }
         return redirect()->route('user.productreview.index');
     }
@@ -157,15 +157,15 @@ class HomeController extends Controller
         if($comment){
             $status=$comment->delete();
             if($status){
-                request()->session()->flash('success','Post Comment successfully deleted');
+                request()->session()->flash('success','Đã xoá bình luận.');
             }
             else{
-                request()->session()->flash('error','Error occurred please try again');
+                request()->session()->flash('error','Đã xảy ra lỗi! vui lòng thử lại.');
             }
             return back();
         }
         else{
-            request()->session()->flash('error','Post Comment not found');
+            request()->session()->flash('error','Không tìm thấy.');
             return redirect()->back();
         }
     }
@@ -176,7 +176,7 @@ class HomeController extends Controller
             return view('user.comment.edit')->with('comment',$comments);
         }
         else{
-            request()->session()->flash('error','Comment not found');
+            request()->session()->flash('error','Không tìm thấy.');
             return redirect()->back();
         }
     }
@@ -196,15 +196,15 @@ class HomeController extends Controller
             // return $data;
             $status=$comment->fill($data)->update();
             if($status){
-                request()->session()->flash('success','Comment successfully updated');
+                request()->session()->flash('success','Đã cập nhật bình luận.');
             }
             else{
-                request()->session()->flash('error','Something went wrong! Please try again!!');
+                request()->session()->flash('error','Đã xảy ra lỗi! vui lòng thử lại!!');
             }
             return redirect()->route('user.post-comment.index');
         }
         else{
-            request()->session()->flash('error','Comment not found');
+            request()->session()->flash('error','Không tìm thấy.');
             return redirect()->back();
         }
 
@@ -223,7 +223,7 @@ class HomeController extends Controller
    
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
    
-        return redirect()->route('user')->with('success','Password successfully changed');
+        return redirect()->route('user')->with('success','Đổi mật khẩu thành công.');
     }
 
     
