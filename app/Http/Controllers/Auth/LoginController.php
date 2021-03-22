@@ -46,29 +46,36 @@ class LoginController extends Controller
         
     }
 
-    public function redirect($provider)
+    public function redirect()
     {
         // dd($provider);
-     return Socialite::driver($provider)->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
  
-    public function Callback($provider)
+    public function Callback()
     {
-        $userSocial =   Socialite::driver($provider)->stateless()->user();
-        $users      =   User::where(['email' => $userSocial->getEmail()])->first();
-        // dd($users);
-        if($users){
-            Auth::login($users);
-            return redirect('/')->with('success','Bạn đăng nhập từ '.$provider);
-        }else{
-            $user = User::create([
-                'name'          => $userSocial->getName(),
-                'email'         => $userSocial->getEmail(),
-                'image'         => $userSocial->getAvatar(),
-                'provider_id'   => $userSocial->getId(),
-                'provider'      => $provider,
-            ]);
-         return redirect()->route('home');
+        try{
+
+            $userSocial =   Socialite::driver('facebook')->stateless()->user();
+            $users      =   User::where(['email' => $userSocial->getEmail()])->first();
+            // dd($users);
+            if($users){
+                Auth::credentials($users);
+                return redirect('/');
+            }else{
+                $user = User::create([
+                    'name'          => $userSocial->getName(),
+                    'email'         => $userSocial->getEmail(),
+                    'image'         => $userSocial->getAvatar(),
+                    'provider_id'   => $userSocial->getId(),
+                    
+                ]);
+            return redirect('/');
+            }
+        }
+        catch(Exception $e)
+        {
+                return redirect('auth/facebook');
         }
     }
 }
