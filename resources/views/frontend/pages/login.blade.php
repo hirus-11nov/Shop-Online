@@ -54,9 +54,8 @@
                                     <div class="form-group login-btn">
                                         <button class="btn" type="submit">Đăng nhập</button>
                                         <a href="{{route('register.form')}}" class="btn">Đăng ký</a>
-                                        <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
-                                        <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>
-                                        <a href="{{route('login.redirect','google')}}" class="btn btn-google"><i class="ti-google"></i></a>
+                                        <a href="{{url('auth/facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
+                                        
 
                                     </div>
                                     <div class="checkbox">

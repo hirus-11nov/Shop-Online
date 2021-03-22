@@ -40,9 +40,9 @@ return [
         'redirect' => 'http://localhost:8000/login/google/callback',
      ],
      'facebook' => [
-        'client_id' => '1494792524037846', //Facebook API
-        'client_secret' => '1bf13c2faf680f4ae2b97bdafa92c7d2', //Facebook Secret
-        'redirect' => 'http://localhost:8000/login/facebook/callback',
+        'client_id' => '781693266056428', //Facebook API
+        'client_secret' => 'a11bea0be332e80e778bd0036fc114f7', //Facebook Secret
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
      ],
 
 ];
