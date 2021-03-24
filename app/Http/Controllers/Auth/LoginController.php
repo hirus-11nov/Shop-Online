@@ -45,7 +45,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         
     }
-
+//facebook
     public function redirect()
     {
         // dd($provider);
@@ -78,4 +78,38 @@ class LoginController extends Controller
                 return redirect('auth/facebook');
         }
     }
+    //Google
+    public function redirectgg()
+    {
+        // dd($provider);
+        return Socialite::driver('google')->redirect();
+    }
+ 
+    public function Callbackgg()
+    {
+        try{
+
+            $userSocial =   Socialite::driver('google')->stateless()->user();
+            $users      =   User::where(['email' => $userSocial->getEmail()])->first();
+            // dd($users);
+            if($users){
+                Auth::credentials($users);
+                return redirect('/');
+            }else{
+                $user = User::create([
+                    'name'          => $userSocial->getName(),
+                    'email'         => $userSocial->getEmail(),
+                    'image'         => $userSocial->getAvatar(),
+                    'provider_id'   => $userSocial->getId(),
+                    
+                ]);
+            return redirect('/');
+            }
+        }
+        catch(Exception $e)
+        {
+                return redirect('auth/google');
+        }
+    }
+
 }

@@ -55,7 +55,7 @@
                                         <button class="btn" type="submit">Đăng nhập</button>
                                         <a href="{{route('register.form')}}" class="btn">Đăng ký</a>
                                         <a href="{{url('auth/facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
-                                        
+                                        <a href="{{url('auth/google')}}" class="btn btn-google"><i class="ti-google"></i></a>
 
                                     </div>
                                     <div class="checkbox">

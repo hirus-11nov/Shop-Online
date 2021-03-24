@@ -27,6 +27,9 @@ Route::post('password-reset', 'FrontendController@showResetForm')->name('passwor
 Route::get('auth/facebook/', 'Auth\LoginController@redirect');
 Route::get('auth/facebook/callback', 'Auth\LoginController@Callback');
 
+Route::get('auth/google/', 'Auth\LoginController@redirectgg');
+Route::get('auth/google/callback', 'Auth\LoginController@Callbackgg');
+
 Route::get('/','FrontendController@home')->name('home');
 
 // Frontend Routes

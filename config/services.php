@@ -35,9 +35,9 @@ return [
         'redirect' => 'http://localhost:8000/login/github/callback',
      ],
      'google' => [
-        'client_id' => '122886334250-fsfd8ugugkr0hjrkakukbgnnruomjn95.apps.googleusercontent.com', //Google API
-        'client_secret' => 'eyuwbzXGBgbebzPXNiqSOods', //Google Secret
-        'redirect' => 'http://localhost:8000/login/google/callback',
+        'client_id' => '559710956141-5422rkjm4mjst43hkokcllu16tirmrjr.apps.googleusercontent.com', //Google API
+        'client_secret' => 'QreDJvrfyEaxpoG39XUbi37j', //Google Secret
+        'redirect' => 'http://localhost:8000/auth/google/callback',
      ],
      'facebook' => [
         'client_id' => '781693266056428', //Facebook API
