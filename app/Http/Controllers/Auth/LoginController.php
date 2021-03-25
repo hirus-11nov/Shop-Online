@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Session;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -37,18 +37,19 @@ class LoginController extends Controller
      * @return void
      */
 
-    public function credentials(Request $request){
-        return ['email'=>$request->email,'password'=>$request->password,'status'=>'active','role'=>'admin'];
-    }
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
+    // public function credentials(Request $request){
+    //     return ['email'=>$request->email,'password'=>$request->password,'status'=>'active','role'=>'admin'];
+    // }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest')->except('logout');
         
-    }
+    // }
+    
 //facebook
     public function redirect()
     {
-        // dd($provider);
+       
         return Socialite::driver('facebook')->redirect();
     }
  
@@ -60,8 +61,10 @@ class LoginController extends Controller
             $users      =   User::where(['email' => $userSocial->getEmail()])->first();
             // dd($users);
             if($users){
-                Auth::credentials($users);
-                return redirect('/');
+                Auth::login($users);
+                //return redirect('home');
+                Session::put('user',$users['email']);
+                return redirect()->route('home');
             }else{
                 $user = User::create([
                     'name'          => $userSocial->getName(),
@@ -70,7 +73,8 @@ class LoginController extends Controller
                     'provider_id'   => $userSocial->getId(),
                     
                 ]);
-            return redirect('/');
+           return redirect('home');
+            // return Redirect::to(Session::get('home'));
             }
         }
         catch(Exception $e)
@@ -82,6 +86,8 @@ class LoginController extends Controller
     public function redirectgg()
     {
         // dd($provider);
+
+      //  return Socialite::driver($provider)->redirect();
         return Socialite::driver('google')->redirect();
     }
  
@@ -93,8 +99,9 @@ class LoginController extends Controller
             $users      =   User::where(['email' => $userSocial->getEmail()])->first();
             // dd($users);
             if($users){
-                Auth::credentials($users);
-                return redirect('/');
+                Auth::login($users);
+                Session::put('user',$users['email']);
+                return redirect()->route('home');
             }else{
                 $user = User::create([
                     'name'          => $userSocial->getName(),
@@ -103,7 +110,7 @@ class LoginController extends Controller
                     'provider_id'   => $userSocial->getId(),
                     
                 ]);
-            return redirect('/');
+            return redirect('home');
             }
         }
         catch(Exception $e)
@@ -111,5 +118,4 @@ class LoginController extends Controller
                 return redirect('auth/google');
         }
     }
-
 }
