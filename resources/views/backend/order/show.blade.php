@@ -98,7 +98,7 @@
                     </tr>
                     <tr>
                         <td>Phương thức thanh toán</td>
-                        <td> : @if($order->payment_method=='cod') Thanh toán khi giao hàng @else Paypal @endif</td>
+                        <td> : @if($order->payment_method=='paypal') Thanh toán khi giao hàng @else Paypal @endif</td>
                     </tr>
                     <tr>
                         <td>Tình trạng thanh toán</td>

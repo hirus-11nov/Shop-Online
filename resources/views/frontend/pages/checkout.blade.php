@@ -382,8 +382,59 @@
                                         <div class="checkbox">
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Kiểm tra thanh toán</label> --}}
                                             <form-group>
+                                            
                                                 <input name="payment_method"  type="radio" value="cod" checked> <label> Tiền mặt</label><br>
                                                 <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label> 
+                                                    @php
+                                                        $vnd_to_usd = $total_amount/23082;
+                                                    @endphp
+                                                    <div id="paypal"></div>
+                                                    
+                                                    <input type="hidden" id="vnd_to_usd" value="{{round($vnd_to_usd,2)}}">
+                                               
+                                                
+                                            <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+                                            <script>
+                                                    var usd = document.getElementById("vnd_to_usd").value;
+                                                paypal.Button.render({
+                                                    // Configure environment
+                                                    env: 'sandbox',
+                                                    client: {
+                                                    sandbox: 'ARg69HoXzOn6J-Jl84q2tw34z1-YvqTDjqvVG6Ba6c1N1MrIwRZLoD_upkRr4FTDaNFMkYiCYR9ou_ME',
+                                                    production: 'EMEDt_I_K7oMQnU1_mTlFHfod4a8FFmRIEKjOWLFVIxPYxrNnlFiJ1pU8KCtyYnxnvddQRCHe62mgvwc'
+                                                    },
+                                                    // Customize button (optional)
+                                                    locale: 'en_US',
+                                                    style: {
+                                                        size: 'small',
+                                                        color: 'gold',
+                                                        shape: 'pill',
+                                                    },
+
+                                                    // Enable Pay Now checkout flow (optional)
+                                                    commit: true,
+
+                                                    // Set up a payment
+                                                    payment: function(data, actions) {
+                                                    return actions.payment.create({
+                                                        transactions: [{
+                                                        amount: {
+                                                            total: `${usd}`,
+                                                            currency: 'USD'
+                                                        }
+                                                        }]
+                                                    });
+                                                    },
+                                                    // Execute the payment
+                                                    onAuthorize: function(data, actions) {
+                                                    return actions.payment.execute().then(function() {
+                                                        // Show a confirmation message to the buyer
+                                                        window.alert('Cám mơn bạn đã mua hàng!');
+                                                    });
+                                                    }
+                                                }, '#paypal');
+
+                                            </script>
                                             </form-group>
                                             
                                         </div>
@@ -470,7 +521,7 @@
                             <h4>Bản tin</h4>
                             <p> Đăng ký bản tin của chúng tôi và nhận<span>10%</span> giảm giá mua đầu tiên của bạn</p>
                             <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="EMAIL" placeholder="Your email address" required="" type="email">
+                                <input name="EMAIL" placeholder="Nhập E-mail của bạn" required="" type="email">
                                 <button class="btn">Đăng ký</button>
                             </form>
                         </div>
