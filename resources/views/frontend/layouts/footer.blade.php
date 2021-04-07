@@ -2,6 +2,7 @@
 	<!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->
+		
 		<div class="footer-top section">
 			<div class="container">
 				<div class="row">
