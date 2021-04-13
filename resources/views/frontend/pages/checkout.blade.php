@@ -383,19 +383,17 @@
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Kiểm tra thanh toán</label> --}}
                                             <form-group>
                                             
-                                                <input name="payment_method"  type="radio" value="cod" checked> <label> Tiền mặt</label><br>
-                                                <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label> 
-                                                    @php
-                                                        $vnd_to_usd = $total_amount/23082;
-                                                    @endphp
-                                                    <div id="paypal"></div>
-                                                    
-                                                    <input type="hidden" id="vnd_to_usd" value="{{round($vnd_to_usd,2)}}">
-                                               
-                                                
+                                                <input name="payment_method" type="radio" value="cod" checked> <label> Tiền mặt</label><br>
+
+                                                @php
+                                                    $vnd_to_usd = $total_amount/23082;
+                                                @endphp
+                                                <div id="paypal">
+                                                    <input name="payment_method" type="radio" id="vnd_to_usd" title="{{round($vnd_to_usd,2)}}" value="paypal"> <label>  Paypal</label><br>
+                                                </div>
                                             <script src="https://www.paypalobjects.com/api/checkout.js"></script>
                                             <script>
-                                                    var usd = document.getElementById("vnd_to_usd").value;
+                                                    var usd = document.getElementById("vnd_to_usd").title;
                                                 paypal.Button.render({
                                                     // Configure environment
                                                     env: 'sandbox',
