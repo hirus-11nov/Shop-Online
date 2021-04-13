@@ -104,20 +104,10 @@ class ProductReviewController extends Controller
     {
         $review=ProductReview::find($id);
         if($review){
-            // $product_info=Product::getProductBySlug($request->slug);
-            //  return $product_info;
-            // return $request->all();
+          
             $data=$request->all();
             $status=$review->fill($data)->update();
 
-            // $user=User::where('role','admin')->get();
-            // return $user;
-            // $details=[
-            //     'title'=>'Update Product Rating!',
-            //     'actionURL'=>route('product-detail',$product_info->id),
-            //     'fas'=>'fa-star'
-            // ];
-            // Notification::send($user,new StatusNotification($details));
             if($status){
                 request()->session()->flash('success','Đánh giá thành công');
             }

@@ -27,7 +27,6 @@ class CartController extends Controller
             request()->session()->flash('error','Sản phẩm không hợp lệ');
             return back();
         }
-
         $already_cart = Cart::where('user_id', auth()->user()->id)->where('order_id',null)->where('product_id', $product->id)->first();
         // return $already_cart;
         if($already_cart) {
@@ -35,9 +34,9 @@ class CartController extends Controller
             $already_cart->quantity = $already_cart->quantity + 1;
             $already_cart->amount = $product->price+ $already_cart->amount;
             // return $already_cart->quantity;
-            if ($already_cart->product->stock < $already_cart->quantity || $already_cart->product->stock <= 0) return back()->with('error','Hàng không đủ!.');
-            $already_cart->save();
-            
+            if ($already_cart->product->stock < $already_cart->quantity || $already_cart->product->stock <= 0) 
+                return back()->with('error','Hàng không đủ!.');
+            $already_cart->save();            
         }else{
             
             $cart = new Cart;

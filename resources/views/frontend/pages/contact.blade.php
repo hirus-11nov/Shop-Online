@@ -104,10 +104,13 @@
 			</div>
 	</section>
 	<!--/ End Contact -->
-	
+	<style>
+		h3 {text-align: center;}
+	</style>
 	<!-- Map Section -->
 	<div class="map-section">
 		<div id="myMap">
+		<h3> Tìm đến shop qua Google Maps</h3>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.413221605323!2d106.78286571512322!3d10.856142260684978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276e6385bd87%3A0x4911cb0a6db60f3b!2sHutech!5e0!3m2!1sen!2s!4v1617798872259!5m2!1sen!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			
 		</div>

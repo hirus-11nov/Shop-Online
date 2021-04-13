@@ -118,7 +118,8 @@ class OrderController extends Controller
         }
         // return $order_data['total_amount'];
         $order_data['status']="new";
-        if(request('payment_method')=='paypal'){
+        $pm = $_POST['payment_method'];
+        if($pm =='paypal'){
             $order_data['payment_method']='paypal';
             $order_data['payment_status']='paid';
         }
@@ -137,13 +138,7 @@ class OrderController extends Controller
             'fas'=>'fa-file-alt'
         ];
         Notification::send($users, new StatusNotification($details));
-        if(request('payment_method')=='paypal'){
-            return redirect()->route('payment')->with(['id'=>$order->id]);
-        }
-        else{
-            session()->forget('cart');
-            session()->forget('coupon');
-        }
+        
         Cart::where('user_id', auth()->user()->id)->where('order_id', null)->update(['order_id' => $order->id]);
 
         // dd($users);        
